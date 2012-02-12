@@ -1,0 +1,14 @@
+<html>
+<head><title>Server: <%= node[:fqdn] %></title></head>
+<body>
+<h1>Welcome at server <%= node[:fqdn]  %></h1>
+
+<ul>
+	<li>Platform: <%= node[:platform] %></li>
+        <li>
+	Run list [roles]: <%= node.run_list.roles.join(", ") %>	
+	</li>
+	<li>Attr: <%= node.symfony.origin %></li>
+</ul>
+</body>
+</html>
